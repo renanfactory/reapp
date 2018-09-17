@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage } from 'ionic-angular';
 
 @IonicPage({
-    name: 'home-page'
+    name: 'page-home'
 })
 @Component({
     selector: 'ib-page-home',
