@@ -1,11 +1,6 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/v2/theming/
-
-// Font path is used to include ionicons,
-// roboto, and noto sans fonts
-$font-path: '../assets/fonts';
-
-@import 'ionic.globals';
+@import "ionic.globals";
 
 
 // Shared Variables
@@ -15,9 +10,21 @@ $font-path: '../assets/fonts';
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
 
-$text-color:        #000;
-$background-color:  #fff;
+$white: #FFFFFF;
+$white-a: darken($white, 3%);
+$white-b: darken($white, 6%);
+$white-c: darken($white, 12%);
+$white-d: darken($white, 24%);
 
+$black: rgba(#000000, .8);
+$black-a: lighten($black, 10%);
+$black-b: lighten($black, 20%);
+$black-c: lighten($black, 40%);
+$black-d: lighten($black, 60%);
+
+$theme-color-1: #00e9d5;
+$theme-color-2: #ae75e7;
+$theme-color-3: #5e5874;
 
 // Named Color Variables
 // --------------------------------------------------
@@ -25,7 +32,7 @@ $background-color:  #fff;
 // It's highly recommended to change the default colors
 // to match your app's branding. Ionic uses a Sass map of
 // colors so you can add, rename and remove colors as needed.
-// The 'primary' color is the only required color in the map.
+// The "primary" color is the only required color in the map.
 
 $colors: (
   primary:    #387ef5,
@@ -33,7 +40,55 @@ $colors: (
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222,
-  favorite:   #69bb7b
+  favorite:   #69BB7B,
+  walkthrough:(
+    base: $theme-color-1,
+    contrast: $white
+  ),
+  walkthrough-alt:(
+    base: $theme-color-2,
+    contrast: $white
+  ),
+  walkthrough-header:(
+    base: transparent,
+    contrast: $white
+  ),
+  header:(
+    base: $theme-color-1,
+    contrast: $white
+  ),
+  header-alt:(
+    base: $theme-color-2,
+    contrast: $white
+  ),
+  facebook:(
+    base: #3b5998,
+    contrast: $white
+  ),
+  google:(
+    base: #cc181e,
+    contrast: $white
+  ),
+  twitter:(
+    base: #00aced,
+    contrast: $white
+  ),
+  button:(
+    base: $theme-color-1,
+    contrast: $white
+  ),
+  button-alt:(
+    base: $theme-color-2,
+    contrast: $white
+  ),
+  background:(
+    base: $white-a,
+    contrast: $black-b
+  ),
+  tabs-navigation:(
+    base: $white,
+    contrast: $white-d
+  )
 );
 
 
@@ -44,7 +99,7 @@ $colors: (
 // so that the above variables are used and Ionic's
 // default are overridden.
 
-@import 'ionic.theme.default';
+@import "ionic.theme.default";
 
 
 // Ionicons
@@ -52,13 +107,5 @@ $colors: (
 // The premium icon font for Ionic. For more info, please see:
 // http://ionicframework.com/docs/v2/ionicons/
 
-@import 'ionic.ionicons';
-
-
-// Fonts
-// --------------------------------------------------
-// Roboto font is used by default for Material Design. Noto sans
-// is used by default for Windows.
-
-@import 'roboto';
-@import 'noto-sans';
+$ionicons-font-path: "../assets/fonts";
+@import "ionic.ionicons";
